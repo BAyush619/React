@@ -5,6 +5,7 @@ import { FaDeleteLeft } from "react-icons/fa6";
 import { LuMoveUp } from "react-icons/lu";
 import { LuMoveDown } from "react-icons/lu";
 import Heading from "../components/Heading";
+import EmptyMessage from "../components/EmptyMessage";
 
 function ToDoList() {
 
@@ -55,6 +56,7 @@ function ToDoList() {
 
         <input type="text" placeholder="Enter tasks heree..." value={newtasks} onChange={handleOnChange} />
         <button className="add-button" onClick={addTask}><IoAdd /></button>
+        <EmptyMessage tasks={tasks}></EmptyMessage>
       </div>
       <ol>
         {tasks.map((task, index) =>
