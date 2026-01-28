@@ -6,6 +6,7 @@ import { LuMoveUp } from "react-icons/lu";
 import { LuMoveDown } from "react-icons/lu";
 import Heading from "../components/Heading";
 import EmptyMessage from "../components/EmptyMessage";
+import EmptyMessageContext from "../context/EmptyMessageContext";
 
 function ToDoList() {
 
@@ -50,27 +51,31 @@ function ToDoList() {
 
 
   return <>
-    <div>
+    <EmptyMessageContext.Provider value={tasks}>
       <div>
-        <Heading></Heading>
+        <div>
+          <Heading></Heading>
 
-        <input type="text" placeholder="Enter tasks heree..." value={newtasks} onChange={handleOnChange} />
-        <button className="add-button" onClick={addTask}><IoAdd /></button>
-        <EmptyMessage tasks={tasks}></EmptyMessage>
+          <input type="text" placeholder="Enter tasks heree..." value={newtasks} onChange={handleOnChange} />
+          <button className="add-button" onClick={addTask}><IoAdd /></button>
+
+          <EmptyMessage ></EmptyMessage>
+
+        </div>
+        <ol>
+          {tasks.map((task, index) =>
+            <li key={index}>
+              <span className="text">
+                {task}
+              </span>
+              <button className="delete-button" onClick={() => deleteTask(index)}><FaDeleteLeft /></button>
+              <button className="moveUp" onClick={() => moveUp(index)}><LuMoveUp /></button>
+              <button className="moveUp" onClick={() => moveDown(index)}><LuMoveDown /></button>
+            </li>
+          )}
+        </ol>
       </div>
-      <ol>
-        {tasks.map((task, index) =>
-          <li key={index}>
-            <span className="text">
-              {task}
-            </span>
-            <button className="delete-button" onClick={() => deleteTask(index)}><FaDeleteLeft /></button>
-            <button className="moveUp" onClick={() => moveUp(index)}><LuMoveUp /></button>
-            <button className="moveUp" onClick={() => moveDown(index)}><LuMoveDown /></button>
-          </li>
-        )}
-      </ol>
-    </div>
+    </EmptyMessageContext.Provider>
   </>
 }
 export default ToDoList;
