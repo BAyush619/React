@@ -1,0 +1,114 @@
+/* Reset + base */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+
+/* Input */
+input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 1em;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 6px;
+  color: white;
+}
+
+/* Add button */
+.add-button {
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(0, 180, 0, 0.7);
+  font-size: 1em;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: rgba(0, 200, 0, 0.85);
+}
+
+ol {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #111;
+  border-radius: 10px;
+  list-style-position: inside;
+}
+
+/* Number styling */
+ol li::marker {
+  color: rgb(80, 144, 104);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Each todo item */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 8px;
+}
+
+/* Task text */
+.text {
+  flex: 1;
+  text-align: left;
+  font-size: 1.05em;
+}
+
+/* Buttons */
+.delete-button,
+.moveUp,
+.moveDown {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+/* Button colors */
+.delete-button {
+  background-color: rgba(200, 0, 0, 0.7);
+  color: white;
+}
+
+.moveUp {
+  background-color: rgba(0, 100, 200, 0.7);
+  color: white;
+}
+
+.moveDown {
+  background-color: rgba(200, 120, 0, 0.7);
+  color: white;
+}
+
+/* Button hover */
+.delete-button:hover {
+  background-color: rgba(255, 0, 0, 0.85);
+}
+
+.moveUp:hover {
+  background-color: rgba(0, 130, 255, 0.85);
+}
+
+.moveDown:hover {
+  background-color: rgba(255, 150, 0, 0.85);
+}

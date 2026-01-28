@@ -1,0 +1,11 @@
+.container {
+  background-color: rgba(0, 0, 0, 0.985);
+  width: 250px;
+  border: 2px solid rgba(0, 0, 0, 0.418);
+  margin-bottom: 10px;
+}
+
+.student {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
