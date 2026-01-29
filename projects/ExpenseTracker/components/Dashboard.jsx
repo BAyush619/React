@@ -1,7 +1,13 @@
 import { useState } from "react";
 import styles from "../Modules/Dashboard.module.css";
-function Dashboard({ showBudget, setBudget }) {
+function Dashboard({ showBudget, setBudget, TotalSpent }) {
   const [isLocked, setIsLocked] = useState(false);
+
+  // Calculate total spent properly
+  const totalAmt = TotalSpent.reduce((sum, item) => sum + item.amount, 0);
+
+  // Calculate remaining balance
+  const remainingBalance = showBudget ? Number(showBudget) - totalAmt : 0;
 
   return (
     <div className={styles.DashContainer}>
@@ -27,13 +33,12 @@ function Dashboard({ showBudget, setBudget }) {
         </div>
         <div className={styles.DashBox}>
           <h4 className={styles.heading}>Total Spent</h4>
-
+          <div className={styles.totspent}>{totalAmt}</div>
 
         </div>
         <div className={styles.DashBox}>
           <h4 className={styles.heading}>Remaining Balance</h4>
-
-
+          <div className={styles.totspent}>{remainingBalance}</div>
         </div>
       </div>
     </div>

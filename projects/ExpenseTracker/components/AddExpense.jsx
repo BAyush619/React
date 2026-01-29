@@ -6,16 +6,20 @@ function AddExpense({ addExpense, setAddExpense }) {
   const [amount, setAmount] = useState("");
 
   function handleAdd() {
-    const newItem = {
-      id: Date.now(),
-      category: category,
-      amount: Number(amount),
+    if (category !== "" && amount !== "") {
+
+
+      const newItem = {
+        id: Date.now(),
+        category: category,
+        amount: Number(amount),
+      }
+
+      setAddExpense([...addExpense, newItem]);
+
+      setCategory("");
+      setAmount("");
     }
-
-    setAddExpense([...addExpense, newItem]);
-
-    setCategory("");
-    setAmount("");
   }
 
   return (

@@ -7,7 +7,23 @@
 .addSpace {
   padding: 10px;
   margin: 10px;
+  background-color: #111;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s ease;
+}
 
+.addSpace::placeholder {
+  color: #777;
+}
+
+.addSpace:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.3);
 }
 
 .addExpensebtn {
