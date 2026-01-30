@@ -49,9 +49,8 @@
 }
 
 .budgetInput {
+  margin-right: 5px;
   padding: 10px;
-  margin: -15px;
-  margin-right: 10px;
   background-color: #111;
   color: #fff;
   border: 1px solid #333;

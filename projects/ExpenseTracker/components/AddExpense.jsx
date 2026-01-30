@@ -16,9 +16,17 @@ function AddExpense({ addExpense, setAddExpense }) {
       }
 
       setAddExpense([...addExpense, newItem]);
+      if (amount <= 0) {
+        alert("please enter valid amount");
+        setAmount("");
+      } else {
+        setAmount("");
+        setCategory("");
+      }
 
-      setCategory("");
-      setAmount("");
+
+
+
     }
   }
 
@@ -28,7 +36,9 @@ function AddExpense({ addExpense, setAddExpense }) {
       <center className={styles.adding}>
         <input type="text" value={category} className={styles.addSpace} placeholder="On what you spend" onChange={(event) => setCategory(event.target.value)} />
 
-        <input type="number" value={amount} className={styles.addSpace} placeholder="Enter Amount" onChange={(event) => setAmount(event.target.value)} />
+        <input type="number" min={1} value={amount} className={styles.addSpace} placeholder="Enter Amount" onChange={(event) => {
+          setAmount(event.target.value);
+        }} />
 
         <button className={styles.addExpensebtn} onClick={handleAdd}>Add Expense</button>
       </center>
