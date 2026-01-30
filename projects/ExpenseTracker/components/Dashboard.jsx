@@ -20,7 +20,6 @@ function Dashboard() {
       <div className={styles.DashRow}>
         <div className={styles.DashBox}>
           <h4 className={styles.heading}>Monthly Budget</h4>
-
           <div className={styles.insideBudget}>
 
             <input type="number" min="0" placeholder="Enter Budget Here..." className={styles.budgetInput} value={budget} onChange={(event) => setBudget(event.target.value)} disabled={isLocked} />
