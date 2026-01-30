@@ -1,13 +1,19 @@
 import { useState } from "react";
 import styles from "../Modules/Dashboard.module.css";
-function Dashboard({ showBudget, setBudget, TotalSpent }) {
+import { useContext } from "react";
+import dashContext from "../ContextFolder/DashBoardContext";
+
+function Dashboard() {
+
+  const { budget, setBudget, addExpense } = useContext(dashContext);
+
   const [isLocked, setIsLocked] = useState(false);
 
   // Calculate total spent properly
-  const totalAmt = TotalSpent.reduce((sum, item) => sum + item.amount, 0);
+  const totalAmt = addExpense.reduce((sum, item) => sum + item.amount, 0);
 
   // Calculate remaining balance
-  const remainingBalance = showBudget ? Number(showBudget) - totalAmt : 0;
+  const remainingBalance = budget ? Number(budget) - totalAmt : 0;
 
   return (
     <div className={styles.DashContainer}>
@@ -17,11 +23,11 @@ function Dashboard({ showBudget, setBudget, TotalSpent }) {
 
           <div className={styles.insideBudget}>
 
-            <input type="number" min="0" placeholder="Enter Budget Here..." className={styles.budgetInput} value={showBudget} onChange={(event) => setBudget(event.target.value)} disabled={isLocked} />
+            <input type="number" min="0" placeholder="Enter Budget Here..." className={styles.budgetInput} value={budget} onChange={(event) => setBudget(event.target.value)} disabled={isLocked} />
 
             {!isLocked ?
               <button className={styles.reset} onClick={() => {
-                if (showBudget == "" || Number(showBudget) <= 0) {
+                if (budget == "" || Number(budget) <= 0) {
                   alert("Please enter a valid budget greater than 0");
                   return;
                 }

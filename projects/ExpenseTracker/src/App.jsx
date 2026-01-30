@@ -3,6 +3,7 @@ import './App.css'
 import Heading from '../components/Heading'
 import Dashboard from '../components/Dashboard'
 import AddExpense from '../components/AddExpense'
+import dashContext from '../ContextFolder/DashBoardContext';
 
 function App() {
   const [budget, setBudget] = useState("");
@@ -24,11 +25,11 @@ function App() {
     setAddExpense(newList);
   }
   return (
-    <>
+    <dashContext.Provider value={{ budget, setBudget, addExpense }}>
       <center>
         <Heading></Heading>
 
-        <Dashboard showBudget={budget} setBudget={setBudget} TotalSpent={addExpense}></Dashboard>
+        <Dashboard ></Dashboard>
 
         <AddExpense addExpense={addExpense} setAddExpense={setAddExpense}></AddExpense>
       </center>
@@ -48,7 +49,7 @@ function App() {
         );
       })}
 
-    </>
+    </dashContext.Provider>
   )
 }
 
