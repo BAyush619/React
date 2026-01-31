@@ -1,0 +1,42 @@
+* {
+  background-color: black;
+  color: white;
+  font-size: 23px;
+}
+
+.container {
+  padding-top: 20px;
+  background-color: #1d2535;
+  width: 45%;
+  border-radius: 14px;
+  height: 5em;
+  min-width: 500px;
+}
+
+.inputBox {
+  border: none;
+  background-color: white;
+  width: 68%;
+  height: 50px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: black;
+}
+
+.copybtn {
+  height: 52px;
+  border: none;
+  background-color: #2048dd;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 79px;
+}
+
+.properties {
+  background-color: #1d2535;
+  margin: 20px;
+}
+
+.lable {
+  background-color: #1d2535;
+}

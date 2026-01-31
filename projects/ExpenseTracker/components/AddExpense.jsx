@@ -23,10 +23,6 @@ function AddExpense({ addExpense, setAddExpense }) {
         setAmount("");
         setCategory("");
       }
-
-
-
-
     }
   }
 
