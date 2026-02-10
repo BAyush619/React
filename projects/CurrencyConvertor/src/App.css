@@ -1,0 +1,154 @@
+.container {
+  height: 50vh;
+  width: 50vh;
+  width: min(90vw, 420px);
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #808080bc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.heading {
+  text-align: center;
+  color: rgb(128, 128, 128);
+  margin: -10px;
+}
+
+.inputBox {
+  margin-left: 29px;
+  width: 100%;
+  max-width: 320px;
+  padding: 12px 14px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+  background-color: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.inputBox::placeholder {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.inputBox:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.inputBox:hover {
+  border-color: #c7d2fe;
+}
+
+.swapColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+/* From / To text */
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Swap button */
+.swapBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #eef2ff;
+  color: #6366f1;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Icon */
+.swapBtn svg {
+  font-size: 20px;
+}
+
+/* Hover animation */
+.swapBtn:hover {
+  background: #6366f1;
+  color: white;
+  transform: rotate(180deg);
+}
+
+/* Click */
+.swapBtn:active {
+  transform: scale(0.9) rotate(180deg);
+}
+
+.convertbtn {
+  margin-left: 50px;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 16px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.convertbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.25);
+}
+
+/* Click */
+.convertbtn:active {
+  transform: scale(0.97);
+}
+
+/* Disabled (future use) */
+.convertbtn:disabled {
+  background: #c7d2fe;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.result {
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+}
+
+/* Highlight value */
+.result span {
+  color: #4f46e5;
+  font-weight: 700;
+}
