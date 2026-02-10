@@ -1,6 +1,4 @@
-import { createContext } from "react";
-
-const PostList = createContext({});
+import { createContext, useReducer } from "react";
 
 const PostListProvider = ({ childern }) => {
   return (
