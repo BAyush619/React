@@ -2,6 +2,7 @@
   height: 50vh;
   width: 50vh;
   width: min(90vw, 420px);
+  height: min(90vw, 420px);
   padding: 24px;
   background-color: #ffffff;
   border-radius: 12px;

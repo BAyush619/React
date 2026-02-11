@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoSwapVerticalOutline } from "react-icons/io5";
 
 function CurrencyContainer() {
@@ -6,7 +6,17 @@ function CurrencyContainer() {
 
   const [fromCurrency, setFromCurrency] = useState("USD");
   const [toCurrency, setToCurrency] = useState("INR");
-  const currencies = ["USD", "INR", "EUR", "GBP"];
+  //const currencies = ["USD", "INR", "EUR", "GBP"];
+  const [currencies, setCurrencies] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.exchangerate-api.com/v4/latest/USD")
+      .then(res => res.json())
+      .then(data => {
+        setCurrencies(Object.keys(data.rates));
+        console.log(data.rates);
+      })
+  }, []);
 
   function swapCurr() {
     setFromCurrency(toCurrency);
