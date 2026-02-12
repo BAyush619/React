@@ -1,8 +1,6 @@
-.container {
-  height: 50vh;
-  width: 50vh;
-  width: min(90vw, 420px);
-  height: min(90vw, 420px);
+.currcontainer {
+  width: min(90vw, 441px);
+  height: min(150vw, 520px);
   padding: 24px;
   background-color: #ffffff;
   border-radius: 12px;
@@ -11,6 +9,7 @@
   flex-direction: column;
   gap: 16px;
 }
+
 
 body {
   margin: 0;
@@ -22,6 +21,20 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+.spinnerwrape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  display: block;
+  margin: 20px auto;
+  width: 3rem;
+  height: 3rem;
+  color: #6366f1;
+}
+
 .heading {
   text-align: center;
   color: rgb(128, 128, 128);
@@ -29,9 +42,7 @@ body {
 }
 
 .inputBox {
-  margin-left: 29px;
   width: 100%;
-  max-width: 320px;
   padding: 12px 14px;
   font-size: 16px;
   font-weight: 500;
@@ -107,9 +118,9 @@ body {
 }
 
 .convertbtn {
-  margin-left: 50px;
+  /* margin-left: 50px; */
   width: 100%;
-  max-width: 320px;
+  max-width: 69vh;
   margin-top: 16px;
   padding: 12px;
   font-size: 16px;
@@ -152,4 +163,37 @@ body {
 .result span {
   color: #4f46e5;
   font-weight: 700;
+}
+
+.result {
+  color: rgb(98, 206, 98);
+  font-size: 2em;
+}
+
+/* css for small view port */
+@media (max-width: 600px) {
+  .currcontainer {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .swapColumn {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .swapBtn {
+    align-self: center;
+    margin: 10px 0;
+  }
+
+  .heading {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .convertbtn {
+    width: 100%;
+    padding: 12px;
+  }
 }

@@ -1,3 +1,4 @@
+import "../App.css";
 import { useEffect, useState } from "react";
 import { IoSwapVerticalOutline } from "react-icons/io5";
 
@@ -6,15 +7,24 @@ function CurrencyContainer() {
 
   const [fromCurrency, setFromCurrency] = useState("USD");
   const [toCurrency, setToCurrency] = useState("INR");
-  //const currencies = ["USD", "INR", "EUR", "GBP"];
+
   const [currencies, setCurrencies] = useState([]);
+
+  const [loading, setLoading] = useState(true);
+
+  const [rates, setRates] = useState({});
 
   useEffect(() => {
     fetch("https://api.exchangerate-api.com/v4/latest/USD")
       .then(res => res.json())
       .then(data => {
         setCurrencies(Object.keys(data.rates));
-        console.log(data.rates);
+        //console.log(data.rates.INR);
+        setRates(data.rates);
+
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
       })
   }, []);
 
@@ -23,39 +33,59 @@ function CurrencyContainer() {
     setToCurrency(fromCurrency);
   }
 
+  const [convertAmount, setConvertAmount] = useState();
+  function convertTheAmount() {
+    const result = amount * (rates[toCurrency] / rates[fromCurrency]);
+    setConvertAmount(result.toFixed(2));
+  }
+
+
   return (
     <>
-      <div className="container">
+      <div className="currcontainer">
         <h1 className="heading">Currency Convertor</h1>
 
         <input type="number" value={amount}
           onChange={(e) => { setAmount(Number(e.target.value)) }} placeholder="Enter Amount" className="inputBox" />
 
-        <div className="swapColumn">
-          <label className="label">From:</label>
-          <select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
-            {currencies.map((currency) => (
-              <option key={currency} value={currency}>{currency}
-              </option>
-            ))}
-          </select>
+        {loading ?
+          <>
+            <div className="spinnerwrape">
+              <div className="spinner-border loadingSpinner" role="status">{/* loading spinner */}
+                <span className="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </> :
+          <>
+            <div className="swapColumn">
+              <label className="label">From:</label>
+              <select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
+                {currencies.map((currency) => (
+                  <option key={currency} value={currency}>{currency}
+                  </option>
+                ))}
+              </select>
 
 
-          <button className="swapBtn" onClick={swapCurr}>
-            <IoSwapVerticalOutline />
-          </button>
+              <button className="swapBtn" onClick={swapCurr}>
+                <IoSwapVerticalOutline />
+              </button>
 
-          <label className="label">To:</label>
-          <select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
-            {currencies.map((currency) => (
-              <option key={currency} value={currency}>{currency}
-              </option>
-            ))}
-          </select>
-        </div>
+              <label className="label">To:</label>
+              <select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
+                {currencies.map((currency) => (
+                  <option key={currency} value={currency}>{currency}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </>
+        }
 
-        <button className="convertbtn">Convert</button>
-        <h3 className="result">Result: </h3>
+
+
+        <button className="convertbtn" onClick={convertTheAmount}>Convert</button>
+        <h3 className="result">Result: {convertAmount}</h3>
 
       </div>
     </>
