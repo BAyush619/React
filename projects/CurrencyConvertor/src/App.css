@@ -197,3 +197,10 @@ body {
     padding: 12px;
   }
 }
+
+.selectTab {
+  width: 100%;
+  border: 1px solid rgba(137, 130, 130, 0.383);
+  border-radius: 8px;
+  height: 2em;
+}

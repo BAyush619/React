@@ -19,12 +19,15 @@ function CurrencyContainer() {
       .then(res => res.json())
       .then(data => {
         setCurrencies(Object.keys(data.rates));
-        //console.log(data.rates.INR);
         setRates(data.rates);
 
         setTimeout(() => {
           setLoading(false);
         }, 1000);
+      })
+      .catch(err => {
+        alert("Error in fetching data ", err);
+        loading(false);
       })
   }, []);
 
@@ -38,6 +41,10 @@ function CurrencyContainer() {
     const result = amount * (rates[toCurrency] / rates[fromCurrency]);
     setConvertAmount(result.toFixed(2));
   }
+
+  useEffect(() => {
+    convertTheAmount();
+  }, [amount, fromCurrency, toCurrency, rates])
 
 
   return (
@@ -59,7 +66,7 @@ function CurrencyContainer() {
           <>
             <div className="swapColumn">
               <label className="label">From:</label>
-              <select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
+              <select className="selectTab" value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
                 {currencies.map((currency) => (
                   <option key={currency} value={currency}>{currency}
                   </option>
@@ -72,7 +79,7 @@ function CurrencyContainer() {
               </button>
 
               <label className="label">To:</label>
-              <select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
+              <select className="selectTab" value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
                 {currencies.map((currency) => (
                   <option key={currency} value={currency}>{currency}
                   </option>
