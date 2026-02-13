@@ -1,6 +1,6 @@
 .currcontainer {
   width: min(90vw, 441px);
-  height: min(150vw, 520px);
+  height: min(150vw, 580px);
   padding: 24px;
   background-color: #ffffff;
   border-radius: 12px;
@@ -85,6 +85,12 @@ body {
   letter-spacing: 0.5px;
 }
 
+.swappingDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Swap button */
 .swapBtn {
   display: flex;
@@ -102,7 +108,8 @@ body {
 
 /* Icon */
 .swapBtn svg {
-  font-size: 20px;
+  font-size: 50px;
+
 }
 
 /* Hover animation */

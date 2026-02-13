@@ -1,6 +1,7 @@
 import "../App.css";
 import { useEffect, useState } from "react";
 import { IoSwapVerticalOutline } from "react-icons/io5";
+import DropDown from "./DropDown";
 
 function CurrencyContainer() {
   const [amount, setAmount] = useState(1);
@@ -52,7 +53,7 @@ function CurrencyContainer() {
       <div className="currcontainer">
         <h1 className="heading">Currency Convertor</h1>
 
-        <input type="number" value={amount}
+        <input type="number" value={amount} min={0}
           onChange={(e) => { setAmount(Number(e.target.value)) }} placeholder="Enter Amount" className="inputBox" />
 
         {loading ?
@@ -62,33 +63,28 @@ function CurrencyContainer() {
                 <span className="visually-hidden">Loading...</span>
               </div>
             </div>
-          </> :
+          </>
+          :
           <>
-            <div className="swapColumn">
-              <label className="label">From:</label>
-              <select className="selectTab" value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
-                {currencies.map((currency) => (
-                  <option key={currency} value={currency}>{currency}
-                  </option>
-                ))}
-              </select>
+            <DropDown lable="From"
+              fromCurrency={fromCurrency}
+              setFromCurrency={setFromCurrency}
+              currencies={currencies}>
+            </DropDown>
 
-
+            <div className="swappingDiv">
               <button className="swapBtn" onClick={swapCurr}>
                 <IoSwapVerticalOutline />
               </button>
-
-              <label className="label">To:</label>
-              <select className="selectTab" value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
-                {currencies.map((currency) => (
-                  <option key={currency} value={currency}>{currency}
-                  </option>
-                ))}
-              </select>
             </div>
+            <DropDown lable="To"
+              fromCurrency={fromCurrency}
+              setFromCurrency={setFromCurrency}
+              currencies={currencies}>
+            </DropDown>
+
           </>
         }
-
 
 
         <button className="convertbtn" onClick={convertTheAmount}>Convert</button>

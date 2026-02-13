@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <DarkModeToggler></DarkModeToggler>
+      {/* <DarkModeToggler></DarkModeToggler> */}
       <CurrencyContainer></CurrencyContainer>
     </>
   )
