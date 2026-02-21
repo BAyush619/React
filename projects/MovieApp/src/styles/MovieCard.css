@@ -1,0 +1,29 @@
+.movieCardContainer {
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 6vw;
+  width: 30vh;
+  height: 30vh;
+  border: 2px solid wheat;
+}
+
+.imgContainer {
+  height: 60%;
+  margin: 10px;
+  border: 1px solid salmon;
+}
+
+.title {
+  margin-left: 10px;
+  margin-top: -7px;
+  color: white;
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+}
+
+.releadeDate {
+  margin: 10px;
+  color: white;
+}
