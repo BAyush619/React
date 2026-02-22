@@ -17,6 +17,9 @@ function Movies() {
         setMovie(data.results);
       })
   }, [])
+
+
+
   return (
     <>
       <br /><br /><br /><br /><br />

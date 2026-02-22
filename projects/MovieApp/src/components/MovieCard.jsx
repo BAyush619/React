@@ -5,27 +5,24 @@ function MovieCard({ movie }) {
 
 
   const imageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
-  const [fav, setfav] = useState(true);
 
-
-  function setfavfun() {
-    if (fav == false) {
-      setfav(true);
-    } else {
-      setfav(false);
+  const [demo, setDemo] = useState([]);
+  function handle() {
+    const movObj = {
+      title: movie.title,
+      release_date: relaseyear,
     }
-
+    setDemo([...demo, movObj]);
   }
 
+  console.log(demo);
 
   return (
     <>
       <div className="movieCardContainer">
 
         <div className="imgContainer">
-          <div className="heart" onClick={setfavfun}>{fav ? "🤍" : "❤️"}</div>
-
-
+          <div className="heart" onClick={handle}>🤍</div>
           <img src={imageUrl} alt="movie image" />
         </div>
         <div className="title">

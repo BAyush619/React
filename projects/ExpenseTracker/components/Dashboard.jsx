@@ -9,7 +9,7 @@ function Dashboard() {
 
   const [isLocked, setIsLocked] = useState(false);
 
-  // Calculate total spent properly
+  // Calculate total spent
   const totalAmt = addExpense.reduce((sum, item) => sum + item.amount, 0);
 
   // Calculate remaining balance
