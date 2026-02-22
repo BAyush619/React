@@ -5,3 +5,36 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+.search-mobile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchmobile {
+  width: 40%;
+  border: 1px solid seashell;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 34px;
+  color: white;
+  margin-right: 4px;
+}
+
+.logomobile {
+  border: 1px solid seashell;
+  background-color: #333;
+  font-size: 34px;
+  height: 100%;
+  cursor: pointer;
+  margin-left: -5px;
+  margin-top: 3px
+}
+
+@media(min-width: 768px) {
+  .search-mobile {
+    display: none;
+  }
+}

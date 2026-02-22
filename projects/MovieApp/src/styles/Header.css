@@ -5,6 +5,7 @@
 }
 
 header {
+  z-index: 100;
   width: 100%;
   background-color: #222;
   display: flex;
@@ -12,18 +13,31 @@ header {
   align-items: center;
   height: 5vh;
   position: fixed;
+  min-height: 60px;
 }
 
 .brand {
   background-color: #222;
   margin-left: 10vh;
   color: white;
-  font-size: 2vh;
+  font-size: 25px;
+}
+
+.brandlink {
+  background-color: #222;
+  text-decoration: none;
+  color: white;
 }
 
 .brand::first-letter {
-  font-size: 3vh;
+  font-size: 30px;
   color: #999999;
+}
+
+.brandcontainer {
+  background-color: #222;
+  margin-right: 10ch;
+  display: flex;
 }
 
 .home {
@@ -32,11 +46,23 @@ header {
   margin-right: 10px;
 }
 
-.home:hover {
+.homeLink {
+  background-color: #222;
+  text-decoration: none;
+  color: white;
+}
+
+.favlink {
+  background-color: #222;
+  text-decoration: none;
+  color: white;
+}
+
+.homeLink:hover {
   color: #f5c518;
 }
 
-.fav:hover {
+.favlink:hover {
   color: #f5c518;
 }
 
@@ -51,4 +77,37 @@ header {
   background-color: #222;
   margin-right: 10ch;
   display: flex;
+}
+
+.searchbtn {
+  border: none;
+}
+
+.search {
+  border: none;
+  height: 34px;
+  width: 100%;
+  color: white;
+  margin-right: 4px;
+}
+
+.searcharea {
+  width: 100px;
+  min-width: 225px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  background-color: #333;
+  font-size: 34px;
+  height: 100%;
+  cursor: pointer;
+}
+
+
+@media(max-width: 768px) {
+  .searcharea {
+    display: none;
+  }
 }
