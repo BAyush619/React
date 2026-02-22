@@ -28,6 +28,20 @@
   opacity: 1;
 }
 
+.imgContainer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  /* black effect */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.imgContainer:hover::after {
+  opacity: 1;
+}
 
 .imgContainer img {
   width: 100%;
