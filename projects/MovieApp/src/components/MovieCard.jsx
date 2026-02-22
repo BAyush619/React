@@ -6,27 +6,15 @@ function MovieCard({ movie }) {
 
   const imageUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
   const [fav, setfav] = useState(true);
-  const [favouriteMovies, setFavouriteMovies] = useState([]);
+
 
   function setfavfun() {
     if (fav == false) {
       setfav(true);
     } else {
       setfav(false);
-
     }
 
-    // const movieObj = {
-    //   title: movie.title,
-    //   release_date: relaseyear,
-    //   poster_path: imageUrl
-    // };
-    // setFavouriteMovies(prev => {
-    //   const newFav = [...prev, movieObj];
-    //   console.log("Added to favourites:", movieObj);
-    //   console.log("Current favourites array:", newFav);
-    //   return newFav;
-    // });
   }
 
 
