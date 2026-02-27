@@ -8,15 +8,16 @@ function App({ noOfStars = 10 }) {
 
 
   function handleClick(currentIndex) {
-    console.log(currentIndex)
+    setRatings(currentIndex);
+    // console.log(currentIndex)
   }
   function handleMouseMove(currentIndex) {
     setHover(currentIndex)
-    console.log(currentIndex)
+    // console.log(currentIndex)
   }
 
-  function handleMouseLeave(currentIndex) {
-    console.log(currentIndex)
+  function handleMouseLeave() {
+    setHover(ratings)
   }
   return (
     <>
@@ -26,11 +27,11 @@ function App({ noOfStars = 10 }) {
             index += 1;
 
             return <FaStar
-
+              className={index <= (hover || ratings) ? "active" : "inactive"}
               key={index}
               onClick={() => handleClick(index)}
               onMouseMove={() => handleMouseMove(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
+              onMouseLeave={() => handleMouseLeave()}
 
             ></FaStar>
 
