@@ -5,6 +5,6 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App url={"https://picsum.photos/v2/list"} limit={"5"} page={"1"} />
+    <App url={"https://picsum.photos/v2/list"} limit={"10"} page={"1"} />
   </StrictMode>,
 )

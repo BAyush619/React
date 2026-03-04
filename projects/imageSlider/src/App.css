@@ -19,7 +19,7 @@
   top: 50%;
   z-index: 100;
   font-size: 30px;
-  background-color: aqua;
+  color: white;
   cursor: pointer;
 }
 
@@ -36,7 +36,17 @@
   width: 30px;
   border-radius: 50%;
   background-color: white;
-  margin: 2px
+  margin: 2px;
+  border: none;
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgb(219, 175, 93)
+}
+
+.inactive {
+  background-color: white;
 }
 
 .sliderbar {
