@@ -1,0 +1,38 @@
+.btn {
+  border: none;
+  background-color: white;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+* {
+
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container {
+  background-color: goldenrod;
+  height: 100vh;
+  width: 30%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 10px;
+}
+
+li {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.btn {
+  background-color: goldenrod;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}

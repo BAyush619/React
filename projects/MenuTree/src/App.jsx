@@ -5,7 +5,9 @@ function App() {
 
   return (
     <>
-      <ItemsList list={Data}></ItemsList>
+      <div className="nav-container">
+        <ItemsList list={Data} />
+      </div>
     </>
   )
 }

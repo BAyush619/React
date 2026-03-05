@@ -1,5 +1,5 @@
 import Item from "./Item";
-
+import "../App.css"
 function ItemsList({ list = [] }) {
   return (
     <ul>
