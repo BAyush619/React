@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.dark {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+
+
+.light {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  transition: all 0.5s;
+}
+
+.darktxt {
+  color: white;
+  transition: all 0.5s;
+}
+
+.lighttxt {
+  transition: all 0.5s;
+  color: black;
+}
+
+.btn {
+  width: 150px
+}
