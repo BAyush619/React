@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.gitWrapper {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.gitWrapper h1 {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+.searchbtn {
+  padding: 10px 15px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #6366f1;
+  color: white;
+  cursor: pointer;
+}
+
+.searchbtn:hover {
+  background: #4f46e5;
+}
+
+.profileContainer {
+  margin-top: 25px;
+  background: #334155;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.personalInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.imgContainer img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.myInfo {
+  text-align: left;
+}
+
+.followings,
+.createdAt,
+.updatedAt {
+  margin-top: 8px;
+}
