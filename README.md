@@ -42,57 +42,81 @@ Each project is built independently to demonstrate a particular concept or funct
 ![Accordion](./Screenshorts/Accordion.png)
 
 ### Features
-* Expand and collapse content sections
-* Smooth user interaction
-* State-based UI rendering
-* Clean component structure
+
+* Expand and collapse FAQ-style accordion items.
+* Single selection mode – only one item can be opened at a time.
+* Multiple selection mode – users can open multiple accordion items simultaneously.
+* Toggle button to switch between single and multiple selection modes.
+* Clicking an already opened item closes it automatically.
+* Dynamic rendering of questions and answers from a data array.
+* Simple and responsive UI for displaying expandable content.
 
 ### Tech Stack
 
-* React
-* JavaScript (ES6)
-* CSS
+* React.js – Component-based UI development
+* React Hooks
+* useState for state management
+* CSS3 – Styling the accordion layout
+* HTML5 – Structure of components
 
 ---
 
 ## 2. Calculator
+![Calculator](./Screenshorts/Calculator.png)
 
 ### Features
 
-* Perform arithmetic operations
-* Interactive button inputs
-* Responsive calculator layout
-* Handles calculation edge cases
+* Perform basic arithmetic operations (+, −, ×, ÷)
+* Real-time display of input and results
+* Clear (C) button to reset calculations
+* Evaluate expressions using =
+* Dynamic rendering of buttons using React
+* Simple and user-friendly interface
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
+* React.js
+* useState (React Hooks)
+* CSS Modules
+* HTML5
 
 ---
 
 ## 3. Currency Converter
+![CurrencyConvertor](./Screenshorts/CurrnecyConvertor.png)
 
 ### Features
 
-* Convert currencies dynamically
-* Fetch real-time exchange rates
-* User-friendly interface
-* Currency selection options
+* Convert between multiple currencies in real-time
+* Fetch live exchange rates from API
+* Swap currencies with a single click
+* Automatic conversion when input or currency changes
+* Loading spinner while fetching data
+* Clean and user-friendly UI
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
-* REST API (Currency Exchange API)
+* React.js
+* React Hooks (useState, useEffect)
+* Exchange Rate API
+* CSS3
+* HTML5
+
+### Dark Mode Toggler (Work in Progress)
+
+* Toggle button UI created
+* Dark mode state management not implemented yet
+* Theme switching logic (light/dark) pending
+* CSS integration for dark mode is under development
 
 ---
 
 ## 4. Expense Tracker
+![ExpenseTracker](./Screenshorts/ExpenseTracker.png)
 
 ### Features
+
+<!-- continue -->
 
 * Add and remove transactions
 * Track income and expenses
