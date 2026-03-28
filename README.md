@@ -118,186 +118,225 @@ Each project is built independently to demonstrate a particular concept or funct
 
 <!-- continue -->
 
-* Add and remove transactions
-* Track income and expenses
-* Dynamic balance calculation
-* Simple financial overview
+* Add expenses with category & amount
+* Input validation (no empty or invalid values)
+* Auto calculation of total spent
+* Remaining balance based on budget
+* Set & reset monthly budget
+* Clean and simple UI
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
+* React.js
+* useState, useContext
+* Context API
+* CSS Modules
 
 ---
 
 ## 5. GitHub Profile Finder
+![gitProfile-Finder](./Screenshorts/gitProfile-Finder.png)
 
 ### Features
 
 * Search GitHub users by username
-* Fetch profile data from API
-* Display repositories and profile info
-* Clean profile UI
+* Fetch real-time data from GitHub API
+* Display profile info (name, login, avatar)
+* Show followers, following, and repositories
+* Handles missing data gracefully
+* Simple and clean UI
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
-* GitHub REST API
+* React.js
+* useState, useEffect
+* Fetch API
+* CSS3
+* HTML5
 
 ---
 
 ## 6. Image Slider
+![imageSlider](./Screenshorts/imageSlider.png)
 
 ### Features
 
-* Navigate through images
-* Next and previous controls
-* Smooth transition effects
-* Responsive slider layout
+* Fetch images from API dynamically
+* Left & right navigation controls
+* Infinite looping (circular navigation)
+* Clickable indicators (dots)
+* Active image highlighting
+* Smooth and simple UI
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
+* React.js
+* useState, useEffect
+* Fetch API
+* React Icons
+* CSS3
 
 ---
 
 ## 7. Light / Dark Mode Toggle
+![LightDarkMode](./Screenshorts/LightDarkMode.png)
 
 ### Features
 
-* Toggle between light and dark themes
-* Persist theme preference
-* Smooth UI theme switching
-* Uses CSS variables for theme control
+* Toggle between light and dark mode
+* Persist theme using localStorage
+* Custom hook for reusable logic
+* Dynamic class-based styling
+* Simple and clean UI
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
-* Local Storage API
+* React.js
+* useState, useEffect
+* Custom Hook (useLocalStorage)
+* LocalStorage API
+* CSS3
 
 ---
 
 ## 8. Menu Tree
+![MenuTree](./Screenshorts/MenuTree.png)
 
 ### Features
 
-* Nested menu structure
-* Expandable and collapsible nodes
-* Dynamic rendering of menu items
-* Recursive component implementation
+* Dynamic nested menu rendering
+* Expand / collapse items (+ / - toggle)
+* Recursive component structure
+* Handles multi-level hierarchy
+* Clean sidebar UI
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
+* React.js
+* useState
+* Recursive Components
+* CSS3
 
 ---
 
 ## 9. Movie App
+![MovieApp](./Screenshorts/MovieApp.png)
 
 ### Features
 
-* Fetch movie data from API
-* Search movies by title
-* Display movie posters and details
+* Fetch popular movies from TMDB API
+* Display movie posters, titles, and release year
 * Responsive movie grid layout
+* Basic routing (Home & Favourites)
+* Search bar UI (mobile & desktop)
+* Uses TMDB API key via .env file
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
-* Movie Database API (TMDB or similar)
+* React.js
+* React Router
+* useState, useEffect
+* Fetch API
+* CSS3
 
 ---
 
 ## 10. Password Generator
+![PasswordGenerator](./Screenshorts/PasswordGenerator.png)
 
 ### Features
 
-* Generate strong random passwords
-* Adjustable password length
-* Include/exclude character types
-* Copy password to clipboard
+* Generate random passwords
+* Adjustable password length (8–40)
+* Option to include numbers
+* Option to include special characters
+* Copy to clipboard functionality
+* Auto-generate on setting change
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
+* React.js
+* useState, useEffect
+* CSS3
 
 ---
 
 ## 11. Random Color Generator
+![randomColor](./Screenshorts/RandomColor.png)
 
 ### Features
 
-* Generate random colors
-* Display HEX and RGB values
-* Interactive color generation
-* Simple and responsive UI
+* Generate random HEX colors
+* Generate random RGB colors
+* Dynamic background color update
+* Display generated color code
+* Simple and interactive UI
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
+* React.js
+* useState
+* JavaScript (Math.random)
+* CSS3
 
 ---
 
 ## 12. Scroll Indicator
+![ScrollIndicator](./Screenshorts/ScrollIndicaotor.png)
 
 ### Features
 
-* Displays page scroll progress
-* Dynamic progress bar
-* Updates while scrolling
-* Lightweight implementation
+* Fetch and display products from API
+* Scroll progress indicator (top progress bar)
+* Real-time scroll percentage tracking
+* Dynamic width update based on scroll
+* Smooth and simple UI
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
+* React.js
+* useState, useEffect
+* Fetch API
+* DOM Scroll APIs
+* CSS3
 
 ---
 
 ## 13. Star Rating Component
+![StarRaing](./Screenshorts/StarRating.png)
 
 ### Features
 
 * Interactive star rating system
-* Hover and click effects
-* Dynamic rating selection
-* Reusable component design
+* Hover preview before selection
+* Click to set rating
+* Dynamic number of stars
+* Active/inactive star styling
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
+* React.js
+* useState
+* React Icons
+* CSS3
 
 ---
 
 ## 14. To-Do App
+![StarRaing](./Screenshorts/ToDo-App.png)
 
 ### Features
 
-* Add tasks
+* Add new tasks
 * Delete tasks
-* Mark tasks as completed
-* Simple task management interface
+* Move tasks up & down
+* Prevent empty task input
+* Dynamic task list rendering
+* Empty state handling using Context API
 
 ### Tech Stack
 
-* React
-* JavaScript
-* CSS
+* React.js
+* useState, Context API
+* React Icons
+* CSS3
