@@ -9,6 +9,10 @@ function CurrencyContainer() {
   const [fromCurrency, setFromCurrency] = useState("USD");
   const [toCurrency, setToCurrency] = useState("INR");
 
+  console.log(fromCurrency)
+  console.log(toCurrency)
+
+
   const [currencies, setCurrencies] = useState([]);
 
   const [loading, setLoading] = useState(true);
@@ -78,8 +82,10 @@ function CurrencyContainer() {
               </button>
             </div>
             <DropDown lable="To"
-              fromCurrency={fromCurrency}
-              setFromCurrency={setFromCurrency}
+              fromCurrency={toCurrency}
+              setFromCurrency={setToCurrency}
+
+
               currencies={currencies}>
             </DropDown>
 
