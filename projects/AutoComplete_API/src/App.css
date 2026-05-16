@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.dropdown {
+  position: absolute;
+  top: 23px;
+  width: 200px;
+  background-color: white;
+}
